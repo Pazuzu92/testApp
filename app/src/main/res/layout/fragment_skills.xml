@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.skills.SkillsFragment">
+
+    <ImageView
+        android:id="@+id/main_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <ImageView
+        android:layout_width="153dp"
+        android:layout_height="107dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/title" />
+
+    <ExpandableListView
+        android:id="@+id/skills_list"
+        android:layout_width="284dp"
+        android:layout_height="576dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp" />
+
+
+</RelativeLayout>

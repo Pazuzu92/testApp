@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_rss">
+
+    <fragment
+        android:id="@+id/nav_rss"
+        android:name="com.example.testapp.ui.home.RssFragment"
+        android:label="RSS"
+        tools:layout="@layout/fragment_rss">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.testapp.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_rss" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_skills"
+        android:name="com.example.testapp.ui.skills.SkillsFragment"
+        android:label="@string/skills"
+        tools:layout="@layout/fragment_skills" />
+
+    <fragment
+        android:id="@+id/nav_pets"
+        android:name="com.example.testapp.ui.pets.PetsFragment"
+        android:label="@string/pets"
+        tools:layout="@layout/fragment_pets" />
+
+    <fragment
+        android:id="@+id/nav_rb"
+        android:name="com.example.testapp.ui.rb.RbFragment"
+        android:label="@string/rb"
+        tools:layout="@layout/fragment_rb" />
+
+    <fragment
+        android:id="@+id/nav_items"
+        android:name="com.example.testapp.ui.items.ItemsFragment"
+        android:label="@string/items"
+        tools:layout="@layout/fragment_items" />
+
+    <fragment
+        android:id="@+id/nav_calculator"
+        android:name="com.example.testapp.ui.craft.CraftCalcFragment"
+        android:label="@string/craft_calculator"
+        tools:layout="@layout/fragment_craft_calculator" />
+</navigation>
